@@ -8,7 +8,7 @@ const timestampPlugin = require("./plugins/timestamp");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "The Lushu Book",
-  tagline: "The book is a collection of Lushu podcast transcriptions.",
+  tagline: "这是一个实验性项目，使用 OpenAI 的 API 将路书播客的音频节目转为可搜索的文字，在未来会支持更多 AI 功能...",
   favicon: "img/logo.jpg",
 
   // Set the production url of your site here
@@ -31,7 +31,14 @@ const config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
-  },
+  }, 
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        language: "zh",
+      },
+    ]],
   presets: [
     [
       "classic",
