@@ -3,23 +3,24 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const timestampPlugin = require("./plugins/timestamp");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "The Lushu Book",
   tagline: "The book is a collection of Lushu podcast transcriptions.",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.jpg",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://lushu-book.vercel.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "stonega", // Usually your GitHub org/user name.
+  projectName: "lushu-book", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -31,22 +32,24 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: "episodes",
+          routeBasePath: "episodes",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/stonega/lushu-book",
+          remarkPlugins: [timestampPlugin],
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -73,18 +76,7 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
-        // links: [
-        //   {
-        //     title: "Docs",
-        //     items: [
-        //       {
-        //         label: "Tutorial",
-        //         to: "/docs/intro",
-        //       },
-        //     ],
-        //   },
-        // ],
+        style: "light",
         copyright: `Made with ❤️ by Stone. Built with Docusaurus.`,
       },
       prism: {
