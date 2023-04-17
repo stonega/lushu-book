@@ -34,3 +34,11 @@ iframe {
   top: 60px;
   margin-bottom: 2rem;
 }
+
+.timestamp {
+   padding: .5rem;
+   color: white;
+   background-color: #337ab7;
+   border-radius: 6px;
+   margin-right: 1rem;
+}

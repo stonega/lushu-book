@@ -8,7 +8,7 @@ function replaceTimestamps(node) {
     if (timestampPattern.test(childNode.value)) {
       node.children.unshift({
         type: "html",
-        value: `<span style="padding: .5rem;  color: white; background: #337ab7; border-radius: 4px; margin-right: 1rem;">${RegExp.$1}</span>`,
+        value: `<span class="timestamp">${RegExp.$1}</span>`,
       });
       childNode.value = childNode.value.replace(
         timestampPattern,

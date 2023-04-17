@@ -33,6 +33,19 @@ const config = {
     defaultLocale: "zh",
     locales: ["zh"],
   },
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      {
+        hashed: true,
+        language: ["en", "zh"],
+        docsRouteBasePath: "/episodes",
+        docsDir: "episodes",
+        highlightSearchTermsOnTargetPage: true
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -78,7 +91,7 @@ const config = {
       },
       footer: {
         style: "light",
-        copyright: `Made with ❤️ by Stone. Built with Docusaurus.`,
+        copyright: `Made with ❤️ by Stone. Built with Docusaurus. Hosted on Vercel. \n 内容版权归路书所有，本项目与路书官方无关。`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -110,7 +123,6 @@ const config = {
 
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: "search",
-
       },
     }),
 };
