@@ -6,14 +6,19 @@ const timestampPattern =
 function replaceTimestamps(node) {
   node.children.forEach((childNode) => {
     if (timestampPattern.test(childNode.value)) {
+       const value = childNode.value.replace(
+        timestampPattern,
+        ""
+      );
       node.children.unshift({
         type: "html",
         value: `<span class="timestamp">${RegExp.$1}</span>`,
       });
-      childNode.value = childNode.value.replace(
-        timestampPattern,
-        ""
-      );
+      node.children.push({
+        type: "html",
+        value: `<span class="text">${value}</span>`,
+      })
+      childNode.value = "";
     }
   });
 }
