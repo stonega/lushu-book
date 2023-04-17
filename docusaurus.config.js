@@ -8,7 +8,8 @@ const timestampPlugin = require("./plugins/timestamp");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "The Lushu Book",
-  tagline: "这是一个实验性项目，使用 OpenAI 的 API 将路书播客的音频节目转为可搜索的文字，在未来会支持更多 AI 功能...",
+  tagline:
+    "这是一个实验性项目，使用 OpenAI 的 API 将路书播客的音频节目转为可搜索的文字，在未来会支持更多 AI 功能...",
   favicon: "img/logo.jpg",
 
   // Set the production url of your site here
@@ -31,14 +32,7 @@ const config = {
   i18n: {
     defaultLocale: "zh",
     locales: ["zh"],
-  }, 
-  plugins: [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        language: "zh",
-      },
-    ]],
+  },
   presets: [
     [
       "classic",
@@ -89,6 +83,34 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "VG6NUP8QO5",
+
+        // Public API key: it is safe to commit it
+        apiKey: "8f8b4e61f694d094615a1fe6725d7c49",
+
+        indexName: "LUSHU",
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: "external\\.com|domain\\.com",
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: "/docs/", // or as RegExp: /\/docs\//
+          to: "/",
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: "search",
+
       },
     }),
 };
