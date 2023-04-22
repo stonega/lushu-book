@@ -50,6 +50,8 @@ p {
   color: white;
   width: 90px;
   background-color: #337ab7;
+  border: none;
+  cursor: pointer;
   border-radius: 6px;
   margin-right: 1rem;
 }
