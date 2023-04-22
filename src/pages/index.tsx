@@ -21,6 +21,7 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
+      <div className="recommend">你可以使用<a href="https://recos.vercel.app" target="_blank">Recos</a>将你喜欢的播客转为文字。</div>
     </header>
   );
 }
