@@ -19,13 +19,19 @@ function HomepageHeader() {
               className="button button--secondary button--lg"
               to="/episodes/1"
             >
-              开始吧
+             看节目
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to="/qa"
+            >
+              问问题
             </Link>
           </div>
         </div>
       </header>
       <div className={styles.recommend}>
-        你可以使用
+        你知道吗？你可以使用
         <a href="https://recos.vercel.app" target="_blank">
           Recos
         </a>

@@ -84,6 +84,12 @@ const config = {
             label: "节目",
           },
           {
+            to: "qa",
+            sidebarId: "qa",
+            position: "left",
+            label: "问问题",
+          },
+          {
             href: "https://github.com/stonega/lushu-book",
             label: "GitHub",
             position: "right",
