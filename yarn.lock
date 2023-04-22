@@ -5783,10 +5783,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-pod-player@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/pod-player/-/pod-player-0.1.4.tgz#493eb80a6594a26f9207f4c1797ee6fce0a7395d"
-  integrity sha512-6+V8N7sUmIPIz99nTwgw2vSIiBEZ7WazitxQbeoR++YrC9H5aycRzactKtpzavUAtu9l5SRlcGX+Rpu0tou6RA==
+pod-player@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/pod-player/-/pod-player-0.1.5.tgz#8dd3bda944daba59c1be0fd43ad6ee0c8963a671"
+  integrity sha512-y6UslCbC9dxeqPdmLMQtbUnqXtiFbNrfbZTjn1Rt26nTxdapm0AR5EQ5IhdNAS0f+SqCXag7Xu4bnrwb65JR+g==
   dependencies:
     "@lit-labs/react" "^1.1.1"
     lit "^2.7.2"

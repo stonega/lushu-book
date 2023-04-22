@@ -1,10 +1,5 @@
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
-function seconds(time) {
-  const [hour, min, sec] = time.split(":");
-  return parseInt(hour) * 3600 + parseInt(min) * 60 + parseInt(sec);
-}
-
 const initPlayer = () => {
   const player = document.querySelector("pod-player");
   const buttons = document.querySelectorAll(".timestamp");
