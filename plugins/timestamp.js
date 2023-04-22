@@ -3,6 +3,10 @@ const visit = require("unist-util-visit");
 const timestampPattern =
   /\d+\s+(\d{2}:\d{2}:\d{2}),\d{3} --> (\d{2}:\d{2}:\d{2},\d{3})/g;
 
+function seconds(time) {
+  const [hour, min, sec] =  time.split(':')
+  return parseInt(hour) * 3600 + parseInt(min)* 60 + parseInt(sec)
+}
 function replaceTimestamps(node) {
   node.children.forEach((childNode) => {
     if (timestampPattern.test(childNode.value)) {
@@ -12,13 +16,15 @@ function replaceTimestamps(node) {
       );
       node.children.unshift({
         type: "html",
-        value: `<span class="timestamp">${RegExp.$1}</span>`,
+        value: `<button class="timestamp"  data=${seconds(RegExp.$1)}>${RegExp.$1}</button>`,
       });
       node.children.push({
         type: "html",
-        value: `<span class="text">${value}</span>`,
+        value: `<p class="text">${value}</p>`,
       })
       childNode.value = "";
+      node.type = 'heading'
+      node.depth = '4'
     }
   });
 }

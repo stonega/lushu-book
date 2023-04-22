@@ -3,13 +3,13 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-const timestampPlugin = require("./plugins/timestamp");
+const timestampPlugin = require("./plugins/timestamp.js");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "The Lushu Book",
   tagline:
-    "这是一个实验性项目，使用 OpenAI 的 API 将路书播客的音频节目转为可搜索的文字，在未来会支持更多 AI 功能...",
+    "这是一个实验性项目，探索播客与 AI 结合的可能性...",
   favicon: "img/logo.jpg",
 
   // Set the production url of your site here
@@ -64,6 +64,7 @@ const config = {
       }),
     ],
   ],
+  clientModules: [require.resolve('./plugins/player.js')],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -91,7 +92,7 @@ const config = {
       },
       footer: {
         style: "light",
-        copyright: `Made with ❤️ by Stone. Built with Docusaurus. Hosted on Vercel. \n 内容版权归路书所有，本项目与路书官方无关。`,
+        copyright: `Made with ❤️ by Stone<br/>Built with Docusaurus Powered by OpenAI<br/> 声明：节目内容版权归路书所有，本项目与路书官方无关。`,
       },
       prism: {
         theme: lightCodeTheme,

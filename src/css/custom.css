@@ -35,10 +35,38 @@ iframe {
   margin-bottom: 2rem;
 }
 
+h4 {
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+
+p {
+  margin-top: .4rem;
+  line-height: 1.4;
+}
+
 .timestamp {
-   padding: .5rem;
-   color: white;
-   background-color: #337ab7;
-   border-radius: 6px;
-   margin-right: 1rem;
+  padding: 0.5rem;
+  color: white;
+  width: 90px;
+  background-color: #337ab7;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+pod-player {
+  position: fixed;
+  width: 300px;
+  top: 5rem;
+  right: 2rem;
+}
+
+@media (max-width: 1000px) {
+  pod-player {
+    top: auto;
+    bottom: 2rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
 }
