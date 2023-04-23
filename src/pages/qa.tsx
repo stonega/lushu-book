@@ -5,19 +5,48 @@ import styles from "./qa.module.css";
 
 function QaPage() {
   const [question, setQuestion] = useState("");
-  function submit() {}
+  const [answer, setAnswer] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function submit() {
+    setAnswer("");
+    setLoading(true);
+    const url = "https://lushu-book-bot-production.up.railway.app/ask";
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({ question: question + ',使用中文回答' }),
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
+      const result = await response.json();
+      setAnswer(result.answer);
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
+  }
   return (
     <>
-      <div className={styles.inputBar}>
-        <input
-          className={styles.inputBox}
-          type="text"
-          value={question}
-          onChange={(event) => setQuestion(event.target.value)}
-        />
-        <button className={styles.askButton} onClick={submit}>问问看</button>
+      <div className={styles.content}>
+        <div className={styles.inputBar}>
+          <input
+            className={styles.inputBox}
+            type="text"
+            value={question}
+            onChange={(event) => setQuestion(event.target.value)}
+          />
+          <button className={styles.askButton} onClick={submit}>
+            {loading ? (
+              <span className={styles.loader}></span>
+            ) : (
+              <span>提问题</span>
+            )}
+          </button>
+        </div>
+        {answer && <div className={styles.answer}>{answer}</div>}
       </div>
-      <div></div>
     </>
   );
 }

@@ -63,7 +63,7 @@ pod-player {
   right: 2rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 996px) {
   pod-player {
     top: auto;
     bottom: 2rem;
