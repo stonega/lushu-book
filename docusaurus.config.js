@@ -33,19 +33,19 @@ const config = {
     defaultLocale: "zh",
     locales: ["zh"],
   },
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      {
-        hashed: true,
-        language: ["en", "zh"],
-        docsRouteBasePath: "/episodes",
-        docsDir: "episodes",
-        highlightSearchTermsOnTargetPage: true
-      },
-    ],
-  ],
+  // themes: [
+  //   [
+  //     require.resolve("@easyops-cn/docusaurus-search-local"),
+  //     /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+  //     {
+  //       hashed: true,
+  //       language: ["en", "zh"],
+  //       docsRouteBasePath: "/episodes",
+  //       docsDir: "episodes",
+  //       highlightSearchTermsOnTargetPage: true
+  //     },
+  //   ],
+  // ],
   presets: [
     [
       "classic",
