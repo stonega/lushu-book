@@ -87,7 +87,13 @@ const config = {
             to: "qa",
             sidebarId: "qa",
             position: "left",
-            label: "问问题",
+            label: "提问",
+          },
+          {
+            to: "search",
+            sidebarId: "search",
+            position: "left",
+            label: "搜索",
           },
           {
             href: "https://github.com/stonega/lushu-book",

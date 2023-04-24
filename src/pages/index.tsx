@@ -19,13 +19,13 @@ function HomepageHeader() {
               className="button button--secondary button--lg"
               to="/episodes/1"
             >
-             看节目
+             节目
             </Link>
             <Link
               className="button button--secondary button--lg"
               to="/qa"
             >
-              问问题
+              提问
             </Link>
           </div>
         </div>
@@ -35,7 +35,7 @@ function HomepageHeader() {
         <a href="https://recos.vercel.app" target="_blank">
           Recos
         </a>
-        将你喜欢的播客转为文字
+        将你喜欢的播客转化为文本
       </div>
     </>
   );
