@@ -109,9 +109,9 @@ const config = {
         appId: "VG6NUP8QO5",
 
         // Public API key: it is safe to commit it
-        apiKey: "8f8b4e61f694d094615a1fe6725d7c49",
+        apiKey: "9a9a4beef1e41bd0aeb3c1bb0b89458f",
 
-        indexName: "LUSHU",
+        indexName: "lushu-book",
 
         // Optional: see doc section below
         contextualSearch: true,
@@ -120,10 +120,10 @@ const config = {
         externalUrlRegex: "external\\.com|domain\\.com",
 
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: "/docs/", // or as RegExp: /\/docs\//
-          to: "/",
-        },
+        // replaceSearchResultPathname: {
+        //   from: "/docs/", // or as RegExp: /\/docs\//
+        //   to: "/",
+        // },
 
         // Optional: Algolia search parameters
         searchParameters: {},
