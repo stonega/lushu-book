@@ -1,5 +1,6 @@
 const replacements = {
   陆书: "路书",
+  '路书88.com-member': 'luhsu88.com/member'
 };
 
 const replace = require("replace-in-file");
