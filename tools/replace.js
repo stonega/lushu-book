@@ -1,10 +1,20 @@
-const replacements = {
-  陆书: "路书",
-  '路书88.com-member': 'luhsu88.com/member'
-};
+const replacements = [
+  {
+    from: "陆书",
+    to: "路书",
+  },
+  {
+    from: "路书88.com-member",
+    to: "luhsu88.com/member",
+  },
+  {
+    from: '曲霞',
+    to: '瞿侠'
+  }
+];
 
 const replace = require("replace-in-file");
-const options = Object.entries(replacements).map(([from, to]) => ({
+const options = replacements.map(({from, to}) => ({
   files: "../episodes/*.mdx",
   from,
   to,
