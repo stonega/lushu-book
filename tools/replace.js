@@ -10,6 +10,10 @@ const replacements = [
   {
     from: '曲霞',
     to: '瞿侠'
+  },
+  {
+    from: '励志FM',
+    to: '荔枝FM'
   }
 ];
 
