@@ -23,6 +23,12 @@ function HomepageHeader() {
             </Link>
             <Link
               className="button button--secondary button--lg"
+              to="/search"
+            >
+              搜索
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
               to="/qa"
             >
               提问
