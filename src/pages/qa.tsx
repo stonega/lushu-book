@@ -15,7 +15,7 @@ function QaPage() {
     try {
       const response = await fetch(url, {
         method: "POST",
-        body: JSON.stringify({ question: question + ',使用中文回答' }),
+        body: JSON.stringify({ question: question + ',请使用简体中文回答' }),
         headers: {
           "Content-Type": "application/json",
         }
