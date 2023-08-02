@@ -2077,6 +2077,11 @@
   resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-1.1.1.tgz#88a4320d357dcdfd7c7e276f809e3453a124cbbc"
   integrity sha512-9TC+/ZWb6BJlWCyUr14FKFlaGnyKpeEDorufXozQgke/VoVrslUQNaL7nBmrAWdNrmzx5jWgi8lFmWwrxMjnlA==
 
+"@lit-labs/react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-2.0.0.tgz#7c2b3b33f80508cbe40e0d263e590aedfe7c81d6"
+  integrity sha512-OMz2/JeoDvuQuR9Ay3HZjeJZxhO0aE6Fhe24tM0MJhSh3PQsIJXtlNNfHD34GkQ1gCe4R9Gw6ekpecsW8BkTjA==
+
 "@lit-labs/ssr-dom-shim@^1.0.0", "@lit-labs/ssr-dom-shim@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.0.tgz#3361d6b8c4cb2ac426d5794ac7cd9776cd2f0814"
