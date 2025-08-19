@@ -30,7 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.0",
     "@tsconfig/docusaurus": "^1.0.5",
-    "cross-fetch": "^3.1.5",
+    "cross-fetch": "^4.0.0",
     "replace-in-file": "^6.3.5",
     "rss-to-json-text": "^2.1.2",
     "typescript": "^5.0.0"
